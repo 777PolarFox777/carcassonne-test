@@ -1,2 +1,2 @@
-# caracassonne-test
-An attempt to create online version of well-known Carcassonne game for learning purpose
+# carcassonne-test
+An attempt to create an online version of the well-known Carcassonne game for learning purposes

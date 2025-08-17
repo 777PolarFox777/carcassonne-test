@@ -4,13 +4,13 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "dist",
-    "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "allowJs": true
   },
-  "include": ["src"],
+  "include": ["src", "drizzle.config.ts", "jest.config.cjs"],
   "exclude": ["node_modules", "dist"]
 }

@@ -6,7 +6,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.eslint.json',
+    project: './tsconfig.json',
   },
   plugins: ['@typescript-eslint', 'prettier'],
   env: {
@@ -16,4 +16,24 @@ module.exports = {
   rules: {
     'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
   },
+  overrides: [
+    {
+      files: ['drizzle.config.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+    },
+    {
+      files: ['jest.config.cjs'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.json',
+        createDefaultProgram: true,
+        sourceType: 'script',
+      },
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+    },
+  ],
 };
